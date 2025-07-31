@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products - ShopEase</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    header {
+      background-color: #222;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 0.5rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #ffd700;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 2rem 0 1rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .product-card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-details {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .product-details h4 {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .product-details p {
+      color: #00796b;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>ShopEase</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h2>Our Products</h2>
+
+  <!-- Product Grid -->
+  <div class="product-grid">
+
+    <!-- Products 1–10 -->
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1519744792095-2f2205e87b6f?auto=format&fit=crop&w=400&q=80" alt="Sport Shoes" />
+      <div class="product-details"><h4>Sport Shoes</h4><p>$59.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=400&q=80" alt="Men's T-Shirt" />
+      <div class="product-details"><h4>Men's T-Shirt</h4><p>$19.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=400&q=80" alt="Leather Jacket" />
+      <div class="product-details"><h4>Leather Jacket</h4><p>$89.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=400&q=80" alt="Smart Watch" />
+      <div class="product-details"><h4>Smart Watch</h4><p>$129.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Denim Jeans" />
+      <div class="product-details"><h4>Denim Jeans</h4><p>$39.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&q=80" alt="Travel Backpack" />
+      <div class="product-details"><h4>Travel Backpack</h4><p>$44.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80" alt="Wireless Headphones" />
+      <div class="product-details"><h4>Wireless Headphones</h4><p>$79.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=400&q=80" alt="Sunglasses" />
+      <div class="product-details"><h4>Ray-Ban Sunglasses</h4><p>$89.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="HP Laptop" />
+      <div class="product-details"><h4>HP Laptop</h4><p>$699.00</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=400&q=80" alt="Luxury Perfume" />
+      <div class="product-details"><h4>Luxury Perfume</h4><p>$49.99</p></div>
+    </div>
+
+    <!-- Products 11–20 -->
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=400&q=80" alt="Shoulder Bag" />
+      <div class="product-details"><h4>Shoulder Bag</h4><p>$34.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1519183071298-a2962cc0e4c1?auto=format&fit=crop&w=400&q=80" alt="Canon Camera" />
+      <div class="product-details"><h4>Canon Camera</h4><p>$549.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Mechanical Keyboard" />
+      <div class="product-details"><h4>Mechanical Keyboard</h4><p>$79.00</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Gaming Mouse" />
+      <div class="product-details"><h4>Gaming Mouse</h4><p>$29.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=400&q=80" alt="Samsung Tablet" />
+      <div class="product-details"><h4>Samsung Tablet</h4><p>$199.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="Evening Dress" />
+      <div class="product-details"><h4>Evening Dress</h4><p>$79.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80" alt="Stylish Hat" />
+      <div class="product-details"><h4>Stylish Hat</h4><p>$19.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1528701800489-2d2f0f27d51e?auto=format&fit=crop&w=400&q=80" alt="High Heels" />
+      <div class="product-details"><h4>High Heels</h4><p>$49.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80" alt="Casual Sneakers" />
+      <div class="product-details"><h4>Casual Sneakers</h4><p>$39.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=400&q=80" alt="Fitness Tracker" />
+      <div class="product-details"><h4>Fitness Tracker</h4><p>$59.99</p></div>
+    </div>
+
+    <!-- Products 21–30 -->
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=400&q=80" alt="Winter Hoodie" />
+      <div class="product-details"><h4>Winter Hoodie</h4><p>$39.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=400&q=80" alt="Gold Ring" />
+      <div class="product-details"><h4>Gold Ring</h4><p>$99.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1501238295340-b7b32fce0a7f?auto=format&fit=crop&w=400&q=80" alt="Formal Belt" />
+      <div class="product-details"><h4>Formal Belt</h4><p>$22.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Bluetooth Earbuds" />
+      <div class="product-details"><h4>Bluetooth Earbuds</h4><p>$49.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=400&q=80" alt="Skincare Set" />
+      <div class="product-details"><h4>Skincare Set</h4><p>$34.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1507504031006-8676b2f82d94?auto=format&fit=crop&w=400&q=80" alt="White Sneakers" />
+      <div class="product-details"><h4>White Sneakers</h4><p>$64.99</p></div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1512427691650-8a27a2ff5de3?auto=format&fit=crop&w=400&q=80" alt="Makeup Kit" />
+      <div class="product-details"><h4>Makeup Kit</h4><p>$59.99</p></div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 ShopEase. All rights reserved.
+  </footer>
+
+</body>
+</html>

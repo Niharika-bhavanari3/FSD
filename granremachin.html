@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JS Garment Machines</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark: #2a333b;
+      --secondary: #b25d41;
+      --light-bg: #fafafa;
+      --text-muted: #979b9f;
+      --gold: #b9925a;
+      --aqua: #39aeb5;
+      --border: #c2cccf;
+      --tan: #d1c7a8;
+      --hero-img: url('https://ext.same-assets.com/1827202677/910762539.jpeg');
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      font-family: 'Rubik', sans-serif;
+      background: var(--light-bg);
+      color: var(--dark);
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background: var(--dark);
+      color: #f96b06;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 8vw;
+      position: sticky; top: 0;
+      z-index: 10;
+    }
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: #fff;
+    }
+    .navbar ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .navbar ul li {
+      font-size: 1rem;
+    }
+    .navbar ul li a {
+      text-decoration: none;
+      color: #fafafa;
+      transition: color 0.2s;
+    }
+    .navbar ul li a:hover,
+    .navbar ul li.active a {
+      color: var(--secondary);
+    }
+    .navbar .phone {
+      background: var(--secondary);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      
+    }
+    .navbar .phone:hover{ background: var(--gold); }
+
+  
+    .hero {
+      background: var(--dark);
+      color: #fff;
+      background-image: var(--hero-img);
+      background-size: cover;
+      background-position: center;
+      padding: 6vw 8vw 6vw 8vw;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2vw;
+    }
+    .hero .content {
+     
+      max-width: 500px;
+      z-index: 1;
+      margin: auto;
+      justify-content: center;
+      text-align: center;
+      margin-left: 300px;
+
+     
+    }
+    .hero h1 {
+      font-size: 20px;
+      margin-bottom: 1rem;
+      width: 700px;
+      margin-left: 0px;
+      margin-right: 1000px;
+      font-style: times;
+    
+    }
+    .hero h2{
+      font-size: 30px;
+      font-weight:bold;
+      margin-left: 100px;
+      width:500px;
+    }
+    
+   
+    .hero .cta {
+      display: inline-block;
+      background-color: rgb(168, 27, 2);
+      margin: 200px;
+      width: 200px;
+      color: #fff;
+      padding: 15px;
+      font-size: 15px;
+      justify-content: center;
+      margin-left: 250px;
+    
+  
+    }
+    .hero .cta:hover { background: var(--gold); color: var(--dark); }
+    .hero .hero-img {
+      min-width: 300px;
+      max-width: 440px;
+      width: 35vw;
+      border-radius: 2rem;
+      background: rgba(255,255,255,0.08);
+      box-shadow: 0 4px 16px #0002;
+    }
+    .hero .hero-img img { width: 100%; border-radius: 2rem; }
+
+
+    section { padding: 3vw 8vw; }
+
+    .section-title {
+      color: var(--secondary);
+      font-size: 1.9rem;
+      margin-bottom: 0.6em;
+      font-weight: 700;
+    }
+
+    
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .feature-card {
+      background: #fff;
+      border-radius: 1.2rem;
+      box-shadow: 0 1px 12px #aaa2;
+      padding: 2rem 1.2rem 1.3rem 1.2rem;
+      text-align: center;
+    }
+    .feature-card h3 {
+      color: var(--dark);
+      font-size: 1.3rem;
+      margin-bottom: 0.6em;
+      font-weight: 600;
+    }
+    .feature-card p {
+      font-size: 1.03rem;
+      color: var(--text-muted);
+    }
+    .feature-card .icon {
+      font-size: 2.6rem;
+      margin-bottom: 0.7em;
+      color: var(--secondary);
+    }
+
+   
+    .about-summary {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2.5rem;
+      margin-top: 2rem;
+      margin-bottom: 2.2rem;
+    }
+    .about-points {
+      flex: 2;
+      font-size: 1.12rem;
+      color: var(--dark);
+    }
+    .about-lists {
+      flex: 2;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .about-list {
+      flex: 1 1 130px;
+      font-size: 0.99rem;
+      color: var(--secondary);
+      list-style: inside disc;
+    }
+    .about-cta {
+      margin-top: 1.2em;
+      display: flex;
+      gap: 1em;
+    }
+    .about-cta a {
+      background: var(--secondary);
+      color: #fff;
+      padding: 0.8em 2em;
+      border-radius: 2em;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1em;
+     
+    }
+    .about-cta a:last-child { background: var(--gold); color: var(--dark); }
+    .about-cta a:hover { filter: brightness(1.07); }
+
+
+    .services-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: 1rem;
+      text-align: center;
+      padding: 2rem 1rem 1.3rem 1rem;
+      box-shadow: 0 1px 12px #8882;
+    }
+    .service-card .icon {
+      font-size: 2.3rem;
+      margin-bottom: 0.5em;
+      color: var(--aqua);
+    }
+    .service-card p {
+      margin-top: 0.7em;
+      color: var(--text-muted);
+    }
+
+    .machines-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .machine-card {
+      background: #fff;
+      border-radius: 1.2rem;
+      box-shadow: 0 1px 12px #aaa2;
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.15s;
+    }
+    .machine-card:hover {transform: translateY(-8px) scale(1.035);}
+    .machine-card img {
+      max-width: 220px; max-height: 160px; width: 100%;
+      border-radius: 1.2rem;
+      margin-bottom: 0.7em;
+    }
+    .machine-card h4 { color: var(--secondary); margin-bottom: 0.5em; font-weight: 600;}
+    .machine-card p { color: var(--text-muted); }
+
+    .choose-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .choose-card {
+      background: #fff;
+      border-radius: 1rem;
+      padding: 1.5em 1em;
+      text-align: center;
+      box-shadow: 0 1px 12px #ccc2;
+    }
+    .choose-card .icon { font-size: 2.3rem; color: var(--gold); margin-bottom: 0.4em;}
+    .choose-card h4 { margin-bottom: 0.6em; }
+    .choose-card p { font-size: 1rem; color: var(--text-muted); }
+
+  
+    .stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      justify-content: center;
+      align-items: flex-end;
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+    .stat-card {
+      text-align: center;
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 1px 10px #ccb2;
+      padding: 2em 2.2em;
+      min-width: 110px;
+      flex: 1 1 120px;
+    }
+    .stat-card h2 {
+      font-size: 2.2em;
+      color: var(--secondary);
+    }
+    .stat-card span {
+      display: block;
+      margin-top: 0.33em;
+      color: var(--dark);
+      font-weight: 500;
+      font-size: 1.08em;
+    }
+
+    .testimonials-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5em;
+      margin-top: 2em;
+      justify-content: center;
+    }
+    .testimonial-card {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 1px 12px #aaa2;
+      max-width: 330px;
+      min-width: 240px;
+      padding: 2em 1.5em 1.3em 1.5em;
+      text-align: center;
+      font-style: italic;
+    }
+    .testimonial-card p {
+      font-size: 1.08em;
+      margin-bottom: 1em;
+      color: #645855;
+    }
+    .testimonial-card .user {
+      margin-top: 0.66em;
+      font-weight: 600;
+      color: var(--secondary);
+    }
+    .testimonial-card .role {
+      color: var(--text-muted);
+      font-size: 0.96em;
+    }
+
+    .footer {
+      background: var(--dark);
+      color: #fff;
+      padding: 2vw 8vw;
+      margin-top: 2vw;
+      border-top: 4px solid var(--secondary);
+      font-size: 1.07em;
+    }
+    .footer-main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      justify-content: space-between;
+      margin-bottom: 1.5em;
+    }
+    .footer-main div, .footer-main address {
+      min-width: 200px;
+      flex: 1 1 270px;
+    }
+    .footer a { color: var(--gold); text-decoration: none; }
+    .footer .copyright {
+      text-align: center;
+      color: var(--tan);
+      font-size: 0.98em;
+      margin-top: 1.5em;
+    }
+
+    @media (max-width: 900px) {
+      .navbar, .hero, section, .footer { padding-left: 20px; padding-right: 20px; }
+      .hero { flex-direction: column; gap: 2.5vw; text-align: center; }
+      .hero .content, .hero .hero-img { max-width: 100%; }
+    }
+    @media (max-width: 650px) {
+      .navbar ul { display: none; } /* Mobile menu: hidden for brevity */
+      .navbar { flex-direction: column; gap: 10px; }
+      .hero h1 { font-size: 2em;}
+      .features, .services-row, .machines-gallery, .choose-row, .testimonials-row, .about-summary, .stats-row, .footer-main {
+        grid-template-columns: 1fr!important; flex-direction: column!important; }
+    }
+  </style>
+</head>
+<body>
+  
+  <nav class="navbar">
+    <a class="logo" href="#">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.g86opn7bkL3mzEiyTG_lIgHaHa?pid=Api&P=0&h=180" alt="logo" width="48" height="48" style="background:#fff;border-radius:12px;">
+      JS Garment Machines
+    </a>
+    <ul>
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Brands</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <a class="phone" href="tel:9133779556">+91 9133779556</a>
+  </nav>
+
+  
+  <div class="hero">
+    <div class="content">
+      <h1 >Top-Tier Machines for Optimal Garment Performance</h1>
+      <h2>JS GARMENT MACHINES</h2>
+      <a class="cta" href="#">Explore Machines</a>
+    </div>
+    <div class="hero-img">
+      <img src="https://ext.same-assets.com/1827202677/910762539.jpeg" alt="hero garment machines">
+    </div>
+  </div>
+
+  <section>
+    
+    <div class="features">
+      <div class="feature-card">
+        <div class="icon">✂️</div>
+        <h3>Cutting-Edge Machinery</h3>
+        <p>Our machines are designed for precision and durability in every cut.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">⚡</div>
+        <h3>Efficient Sewing Solutions</h3>
+        <p>Experience smooth and efficient sewing with our advanced machines.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🌍</div>
+        <h3>Global Distribution</h3>
+        <p>Our machines are trusted and distributed globally to clients around the world.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+   
+    <h2 class="section-title">Who We Are</h2>
+    <div class="about-summary">
+      <div class="about-points">
+        <b>JS Garment Machines</b> from 2013 are actively committed to delivering
+        the world’s best technology in apparel machineries at competitive and affordable
+        prices. 20K+ happy customers prove our products & services are the best in the industry.
+        <div class="about-cta">
+          <a href="#">View More</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+      <div class="about-lists">
+        <ul class="about-list">
+          <li>State-of-the-Art Technology</li>
+          <li>High Efficiency & Precision</li>
+          <li>Versatile Machine Functions</li>
+        </ul>
+        <ul class="about-list">
+          <li>Durable & Reliable Performance</li>
+          <li>Award-Winning Designs</li>
+          <li>Global Distribution Network</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Let’s Experience Our Services</h2>
+    <div class="services-row">
+      <div class="service-card">
+        <div class="icon">🔧</div>
+        <h4>Machine Installation</h4>
+        <p>Seamless installation tailored to your facility’s needs.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🎓</div>
+        <h4>Training Support</h4>
+        <p>Comprehensive training to ensure efficient operation.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🛠</div>
+        <h4>Maintenance & Repair</h4>
+        <p>Keep machines running smoothly with expert maintenance.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">💡</div>
+        <h4>Technical Support</h4>
+        <p>Guidance and troubleshooting for complex issues.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Explore Our Machines</h2>
+    <div class="machines-gallery">
+      <div class="machine-card">
+        <img src="https://ext.same-assets.com/1827202677/3154140126.jpeg" alt="Automatic Button Feeder">
+        <h4>Automatic Button Feeder</h4>
+      </div>
+      <div class="machine-card">
+        <img src="https://ext.same-assets.com/1827202677/1910548461.png" alt="Embroidery Machine">
+        <h4>24 Head Embroidery Machine</h4>
+      </div>
+      <div class="machine-card">
+        <img src="https://ext.same-assets.com/1827202677/4025664672.png" alt="Ricoma Embroidery">
+        <h4>Ricoma Embroidery Machine</h4>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Why Choose Us</h2>
+    <div class="choose-row">
+      <div class="choose-card">
+        <div class="icon">🚀</div>
+        <h4>Advanced Technology</h4>
+        <p>Equipped with the latest tech for precise garment manufacturing.</p>
+      </div>
+      <div class="choose-card">
+        <div class="icon">🌐</div>
+        <h4>Global Reach</h4>
+        <p>We serve garment manufacturers worldwide.</p>
+      </div>
+      <div class="choose-card">
+        <div class="icon">⏰</div>
+        <h4>24/7 Support</h4>
+        <p>Our team is available for your queries anytime.</p>
+      </div>
+      <div class="choose-card">
+        <div class="icon">⭐</div>
+        <h4>Exceptional Service</h4>
+        <p>We pride ourselves in quick, expert support for customers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="stats-row">
+      <div class="stat-card">
+        <h2>10,000+</h2>
+        <span>Machines Sold</span>
+      </div>
+      <div class="stat-card">
+        <h2>198+</h2>
+        <span>Projects Completed</span>
+      </div>
+      <div class="stat-card">
+        <h2>10+</h2>
+        <span>Years in Business</span>
+      </div>
+      <div class="stat-card">
+        <h2>25+</h2>
+        <span>Global Reach</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Testimonials</h2>
+    <div class="testimonials-row">
+      <div class="testimonial-card">
+        <p>“Excellent service, we have purchased JUKI Machines from JS GARMENT MACHINES.”</p>
+        <div class="user">Kavitha</div>
+        <div class="role">Customer</div>
+      </div>
+      <div class="testimonial-card">
+        <p>“MAQI Machine is working good after 3 years. Services are extremely good & friendly team.”</p>
+        <div class="user">Karunakar</div>
+        <div class="role">Customer</div>
+      </div>
+      <div class="testimonial-card">
+        <p>“We are very happy with Products & Service!”</p>
+        <div class="user">Ajay</div>
+        <div class="role">Customer</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-main">
+      <div>
+        <b>Products</b><br>
+        Cutting Machines<br>
+        Sewing Machines<br>
+        Embroidery Machines<br>
+        MID Processing Machines<br>
+        Automation Solutions<br>
+        Finishing Equipment<br>
+        Garment Furniture
+      </div>
+      <div>
+        <b>Contact Us</b><br>
+        No. 24-28/1-38/28B/2, BRTS Main Road,<br>
+        Madhuranagar Signal Gulabhi Thota,<br>
+        Vijayawada, Krishna-520003, Andhra Pradesh, India<br>
+        <a href="tel:9133779556">+91 9133779556</a><br>
+        <a href="mailto:jsgmbza@gmail.com">jsgmbza@gmail.com</a>
+      </div>
+      <address>
+        <b>Locate Us</b><br>
+        <a href="https://www.google.com/maps/place/JS+GARMENT+MACHINES-+Best+Sewing+%26+Embroidery+Machines+in+AP/@16.522477,80.6429425,17z/data=!3m1!4b1!4m6!3m5!1s0x3a35efffb75617b5:0xf808829ee6f45586!8m2!3d16.522477!4d80.6455174!16s%2Fg%2F11b5yq9vf5!5m1!1e1?entry=ttu" target="_blank">Google Maps</a>
+      </address>
+    </div>
+    <div class="copyright">
+      Copyright © 2025 All rights reserved | Website by <a href="https://atomsdigitalsolutions.com/">Atoms Digital Solutions</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+table ,th,td{
+    height: 50px;
+    width:50px;
+    border: 1px solid black;
+
+    
+    
+    border-collapse: collapse;
+     
+    }
+    
+    form{
+        padding: 30px;
+        align-items: center;
+    }
+    label{
+        padding:40px;
+        margin:40px;
+        content: 30px;
+        align-items: right ;
+
+    }
+   img{
+    align-items: right;
+   }

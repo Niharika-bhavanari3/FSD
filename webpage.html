@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Library - Library Management System</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+
+        header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 0.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 16px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.7rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: block;
+        }
+
+        main {
+            padding: 32px 0;
+            min-height: 70vh;
+        }
+
+        .page-section {
+            display: none;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 280px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .card p {
+            margin-bottom: 1rem;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+            gap: 1rem;
+        }
+
+        .stat-item {
+            background: white;
+            text-align: center;
+            padding: 32px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #3498db;
+            display: block;
+        }
+
+        .stat-label {
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #3498db;
+        }
+        @media (min-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.3rem;
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+
+            nav li {
+                margin: 0 1.5rem;
+            }
+
+            .cards-container {
+                gap: 2rem;
+            }
+
+            .card {
+                min-width: 300px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .header-content {
+                flex-wrap: nowrap;
+            }
+
+            .logo {
+                margin-bottom: 0;
+            }
+
+            .hero {
+                padding: 5rem 2rem;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .cards-container {
+                gap: 2.5rem;
+            }
+
+            .stats {
+                gap: 2rem;
+            }
+
+            .footer-content {
+                flex-wrap: nowrap;
+            }
+        }
+
+    
+        @media (min-width: 1200px) {
+            .container {
+                padding: 0 40px;
+            }
+
+            .hero {
+                padding: 6rem 2rem;
+            }
+        }
+
+   
+       
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">📚 Central Library</div>
+                    <div class="tagline">Your Gateway to Knowledge</div>
+                </div>
+                <div class="header-info">
+                    <div>📞 9000601266</div>
+                    <div>📧 niharikabavanari@gmail.com</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#">🏠 Home</a></li>
+                <li><a href="#">📖 Books</a></li>
+                <li><a href="#">👥 Members</a></li>
+                <li><a href="#">🔧 Services</a></li>
+                <li><a href="#">📞 Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="home" class="page-section active">
+            <div class="hero">
+                <h1>Welcome to Central Library</h1>
+                <p>Discover thousands of books, digital resources, and community programs. Your journey to knowledge starts here!</p>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">15,000+</span>
+                    <div class="stat-label">Books Available</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3,500+</span>
+                    <div class="stat-label">Active Members</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <div class="stat-label">Programs Monthly</div>
+                </div>
+            </div>
+
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-icon">📚</div>
+                    <h3>Extensive Collection</h3>
+                    <p>Browse through our vast collection of books, magazines, and digital resources across all genres and subjects.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💻</div>
+                    <h3>Digital Resources</h3>
+                    <p>Access e-books, audiobooks, and online databases from the comfort of your home with your library card.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">👨‍🏫</div>
+                    <h3>Community Programs</h3>
+                    <p>Join our reading clubs, workshops, and educational programs designed for all ages and interests.</p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2025 City Library. All rights reserved.</p>
+                    <p>Serving our community since 1985</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

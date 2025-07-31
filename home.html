@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopEase - Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #222;
+      padding: 1rem 0;
+      color: white;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 0.5rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #ffd700;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(100vh - 100px);
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    .options {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .option-btn {
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      background-color: #00796b;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .option-btn:hover {
+      background-color: #004d40;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #222;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header and Navigation -->
+  <header>
+    <h2>ShopEase</h2>
+    
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>Welcome to ShopEase!</h1>
+    <p>Who are you shopping for today?</p>
+    <div class="options">
+      <button class="option-btn" onclick="location.href='#'">Shop for Men</button>
+      <button class="option-btn" onclick="location.href='#'">Shop for Women</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 ShopEase. All rights reserved.
+  </footer>
+
+</body>
+</html>

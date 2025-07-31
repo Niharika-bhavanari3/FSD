@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Article Layout</title>
+  <style>
+    body {
+      font-family: Arial;
+      line-height: 1.6;
+      background-color: #e4f5e5;
+    }
+
+    header, article, aside, footer {
+      padding: 20px;
+      margin: 10px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+    }
+    article {
+      flex: 3;
+      background-color: white;
+    }
+
+    article section {
+      margin-bottom: 20px;
+    }
+
+    aside {
+      flex: 1;
+      background-color: #f4f5f7;
+    }
+
+    aside h3 {
+      border-bottom: 1px solid #a95656;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      font-size:16px;
+    }
+
+    .tags {
+      margin-bottom: 10px;
+    }
+
+    .tags span {
+      background-color: #b9c3c5;
+      padding: 5px 10px;
+      margin-right: 5px;
+      border-radius: 3px;
+    }
+
+    .social-links a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: #004080;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Breaking News: Tech Innovation 2025</h1>
+    <p>By Niharika Bhavanari | Published on June 29, 2025</p>
+  </header>
+
+  <div class="container">
+    <article>
+      <section>
+        <h2>AI</h2>
+        <p>Artificial intelligence (AI) is a set of technologies that enable computers to perform a variety of advanced functions, including the ability to see, understand and translate spoken and written language, analyze data, make recommendations, and more.</p>
+      </section>
+      <section>
+        <h2>DS</h2>
+        <p>Data science combines math and statistics, specialized programming, advanced analytics, artificial intelligence (AI) and machine learning with specific subject matter expertise to uncover actionable insights hidden in an organization's data. These insights can be used to guide decision making and strategic planning.</p>
+      </section>
+      <section>
+        <h2>ML</h2>
+        <p>Machine learning is a subset of AI, which uses algorithms that learn from data to make predictions. These predictions can be generated through supervised learning, where algorithms learn patterns from existing data, or unsupervised learning, where they discover general patterns in data.</p>
+      </section>
+    </article>
+
+    <aside>
+      <h3>Related Articles</h3>
+      <ul>
+        <li><a href="https://www.hypeinnovation.com/blog/how-ai-is-accelerating-innovation">About AI</a></li>
+        <li><a href="https://www.tandfonline.com/doi/full/10.1080/2573234X.2024.2365917">About DS</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Machine_learning">About ML</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer>
+    <div class="tags">
+      <strong>Tags:</strong>
+      <span>DS</span>
+      <span>AI</span>
+      <span>ML</span>
+    </div>
+    <div class="social-links">
+      <strong>Share:</strong>
+      <a href="https://www.instagram.com/?hl=en">instagram</a>
+      <a href="https://github.com/Niharika-bhavanari3?tab=repositories">github</a>
+      <a href="www.linkedin.com/in/niharika-bavanari-97128b26a">LinkedIn</a>
+    </div>
+  </footer>
+
+</body>
+</html>

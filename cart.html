@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shopping Cart - ShopEase</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #222;
+      padding: 1rem 0;
+      color: white;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 0.5rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #ffd700;
+    }
+
+    .cart-container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .product {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .product:last-child {
+      border-bottom: none;
+    }
+
+    .product-info {
+      flex: 1;
+    }
+
+    .product-name {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .product-price {
+      color: #666;
+      margin-top: 0.2rem;
+    }
+
+    .product-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .btn {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .view-btn {
+      background-color: #1976d2;
+      color: white;
+    }
+
+    .remove-btn {
+      background-color: #e53935;
+      color: white;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #222;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h2>ShopEase</h2>
+    
+  </header>
+
+  <!-- Cart Section -->
+  <div class="cart-container">
+    <h2>Your Shopping Cart</h2>
+
+    <!-- Product List -->
+    <div class="product">
+      <div class="product-info">
+        <div class="product-name">Nike Air Max</div>
+        <div class="product-price">$120.00</div>
+      </div>
+      <div class="product-actions">
+        <a class="btn view-btn" href="https://www.google.com/search?q=nike+air+max" target="_blank">View</a>
+        <button class="btn remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-info">
+        <div class="product-name">Apple iPhone 14</div>
+        <div class="product-price">$899.00</div>
+      </div>
+      <div class="product-actions">
+        <a class="btn view-btn" href="https://www.google.com/search?q=apple+iphone+14" target="_blank">View</a>
+        <button class="btn remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-info">
+        <div class="product-name">Samsung Galaxy Watch</div>
+        <div class="product-price">$249.00</div>
+      </div>
+      <div class="product-actions">
+        <a class="btn view-btn" href="https://www.google.com/search?q=samsung+galaxy+watch" target="_blank">View</a>
+        <button class="btn remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-info">
+        <div class="product-name">Sony WH-1000XM5</div>
+        <div class="product-price">$349.99</div>
+      </div>
+      <div class="product-actions">
+        <a class="btn view-btn" href="https://www.google.com/search?q=sony+wh-1000xm5" target="_blank">View</a>
+        <button class="btn remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-info">
+        <div class="product-name">Adidas Running Shoes</div>
+        <div class="product-price">$95.00</div>
+      </div>
+      <div class="product-actions">
+        <a class="btn view-btn" href="https://www.google.com/search?q=adidas+running+shoes" target="_blank">View</a>
+        <button class="btn remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-info">
+        <div class="product-name">Levi’s 501 Jeans</div>
+        <div class="product-price">$69.99</div>
+      </div>
+      <div class="product-actions">
+        <a class="btn view-btn" href="https://www.google.com/search?q=levis+501+jeans" target="_blank">View</a>
+        <button class="btn remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-info">
+        <div class="product-name">Apple MacBook Air</div>
+        <div class="product-price">$999.00</div>
+      </div>
+      <div class="product-actions">
+        <a class="btn view-btn" href="https://www.google.com/search?q=macbook+air" target="_blank">View</a>
+        <button class="btn remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-info">
+        <div class="product-name">Canon EOS M50</div>
+        <div class="product-price">$579.00</div>
+      </div>
+      <div class="product-actions">
+        <a class="btn view-btn" href="https://www.google.com/search?q=canon+eos+m50" target="_blank">View</a>
+        <button class="btn remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-info">
+        <div class="product-name">Ray-Ban Sunglasses</div>
+        <div class="product-price">$129.00</div>
+      </div>
+      <div class="product-actions">
+        <a class="btn view-btn" href="https://www.google.com/search?q=ray+ban+sunglasses" target="_blank">View</a>
+        <button class="btn remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-info">
+        <div class="product-name">HP Pavilion Laptop</div>
+        <div class="product-price">$749.00</div>
+      </div>
+      <div class="product-actions">
+        <a class="btn view-btn" href="https://www.google.com/search?q=hp+pavilion+laptop" target="_blank">View</a>
+        <button class="btn remove-btn">Remove</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 ShopEase. All rights reserved.
+  </footer>
+
+</body>
+</html>
